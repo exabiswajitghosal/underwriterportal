@@ -34,17 +34,17 @@ const MyMenu = ({ collapsed }) => {
       mode="inline"
       selectedKeys={[pathToKey[location.pathname] || '1']}
     >
-      <Menu.Item key="1" icon={<HomeOutlined />}>
-        {!collapsed ? <Link to="/dashboard" style={{ textDecoration: 'none' }}>Dashboard</Link> : ''}
+      <Menu.Item key="1" icon={<HomeOutlined />} title={"Dashboard"}>
+        {!collapsed ? <Link to="/dashboard" style={{ textDecoration: 'none' }}>Dashboard</Link> : <Link to="/dashboard" style={{ textDecoration: 'none' }} />}
       </Menu.Item>
-      <Menu.Item key="2" icon={<InfoCircleOutlined />}>
-        {!collapsed ? <Link to="/accountdashboard" style={{ textDecoration: 'none' }}>Account Information</Link> : ''}
+      <Menu.Item key="2" icon={<InfoCircleOutlined />} title={"Account Information"}>
+        {!collapsed ? <Link to="/accountdashboard" style={{ textDecoration: 'none' }}>Account Information</Link> : <Link to="/accountdashboard" style={{ textDecoration: 'none' }} />}
       </Menu.Item>
-      <Menu.Item key="3" icon={<FileTextOutlined />}>
-        {!collapsed ? <Link to="/accountinfo" style={{ textDecoration: 'none' }}>Account Details</Link> : ''}
+      <Menu.Item key="3" icon={<FileTextOutlined />} title={"Account Details"}>
+        {!collapsed ? <Link to="/accountinfo" style={{ textDecoration: 'none' }}>Account Details</Link> : <Link to="/accountinfo" style={{ textDecoration: 'none' }} />}
       </Menu.Item>
-      <Menu.Item key="4" icon={<EditFilled />}>
-        {!collapsed ? <Link to="/createsubmission" style={{ textDecoration: 'none' }}>Create Submission</Link> : ''}
+      <Menu.Item key="4" icon={<EditFilled />} title={"Create Submission"}>
+        {!collapsed ? <Link to="/createsubmission" style={{ textDecoration: 'none' }}>Create Submission</Link> : <Link to="/createsubmission" style={{ textDecoration: 'none' }} />}
       </Menu.Item>
     </Menu>
   );
